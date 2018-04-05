@@ -13,7 +13,7 @@ README version: xCode 6.0, Swift 1.0
 - [Retroalimentación](#user-content-retroalimentación)
 - [Introducción](#user-content-introducción)
   - [Crea tu proyecto](#user-content-crea-tu-proyecto)
-  - [Add a textfield to your storyboard](#user-content-add-a-textfield-to-your-storyboard)
+  - [Agrega un campo de texto al storyboard](#user-content-agrega-un-campo-de-texto-al-storyboard)
 - [Gluing Our Views Together: The storyboard](#user-content-gluing-our-views-together-the-storyboard)
   - [Position text field using Auto Layout](#user-content-position-text-field-using-auto-layout)
   - [Create a table view controller](#user-content-create-a-table-view-controller)
@@ -55,17 +55,17 @@ README version: xCode 6.0, Swift 1.0
 1. Ingresa lo siguiente: ![](/img/img_1.png)
 1. Presiona el botón de ejecutar en la esquina superior izquierda de xCode - ahora debe aparecer una pantalla en blanco
 
-##### Add a textfield to your storyboard
-1. In the Project Navigator on the far left of xCode, select Main.storyboard
-1. Find the Object Library, and find or search for 'Text Field'
+##### Agrega un campo de texto al storyboard
+1. En el Project Navigator, ubicado en la columna izquierda de xCode, selecciona Main.storyboard
+1. Localiza la Object Library en la parte inferior de la columna derecha y escribe en la barra de búsqueda 'Text Field'
 1. <img src="https://raw.githubusercontent.com/jadekler/git-swift-todo-tutorial/updated_readme/img/img_2.png" height="250px"/>
-1. Drag one to the furthest left guider on your View, about 1/3 from the top of your view
-1. Increase the width of the text field by dragging the right side of the text view to the rightmost guider
-1. Next, let's change the placeholder text
-  1. In the Utilities Slider on the right side of Xcode, find the Attributes Inspector (4th icon on the top bar from the left)
-  1. Enter 'new todo' next to 'Placeholder'
-1. Your storyboard should look like this: ![](/img/img_3.png)
-1. Checkpoint: Hit the run button on the top left of xCode - you should see a blank white screen with a text field that says 'New Todo' (don't worry if the text field goes off of the screen)
+1. Haz click en el cuadro 'Text Field' y arrástralo al borde izquierdo de tu View, apróximadamente 1/3 debajo del borde superior
+1. Aumenta la longitud del campo de texto arrastrando el lado derecho hasta el borde derecho de tu View
+1. Cambia el texto de marcador de posición
+	1. En el Utilities Slider, ubicado en la columna derecha de Xcode, encuentra el Attributes Inspector (4to icono en la barra superior del Utilities Slider)
+	1. Escribe 'Nueva tarea' en el campo 'Placeholder'
+1. Tu storyboard debe verse así: ![](/img/img_3.png)
+1. Presiona el botón de ejecutar en la esquina superior izquierda de xCode - ahora debe aparecer una pantalla blanco con un campo de texto que dice 'Nueva tarea' (no te angusties si el campo de texto excede el largo de la pantalla)
 
 ## Gluing Our Views Together: The storyboard
 
