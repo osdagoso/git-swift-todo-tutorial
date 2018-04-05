@@ -1,4 +1,4 @@
-# Swift TODO App Tutorial
+# Tutorial de aplicación de lista de tareas en Swift
 
 _Note:_ This repo is fairly out of date. Use at your own risk.
 
@@ -8,7 +8,7 @@ README version: xCode 6.0, Swift 1.0
 
 =======================
 
-- [Foreword](#user-content-foreword)
+- [Preámbulo](#user-content-preambulo)
 - [Installing This App](#user-content-installing-this-app)
 - [Feedback](#user-content-feedback)
 - [Getting Start: The Basics](#user-content-getting-start-the-basics)
@@ -30,7 +30,7 @@ README version: xCode 6.0, Swift 1.0
   - [Mark item as complete](#user-content-mark-item-as-complete)
   - [Lastly - add new items](#user-content-lastly---add-new-items)
 
-## Foreword
+## Preámbulo
 
 1. This tutorial is based on [Apple's xCode 5 Objective C TODO tutorial](https://developer.apple.com/library/ios/referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343-CH2-SW1), which is an excellent place to look for auxiliary context (and screenshots!)
 1. Check out the Todo folder for the completed code
