@@ -9,10 +9,10 @@ README version: xCode 6.0, Swift 1.0
 =======================
 
 - [Preámbulo](#user-content-preámbulo)
-- [Installing This App](#user-content-installing-this-app)
-- [Feedback](#user-content-feedback)
-- [Getting Start: The Basics](#user-content-getting-start-the-basics)
-  - [Create your project](#user-content-create-your-project)
+- [Instalando la aplicación](#user-content-instalando-la-aplicación)
+- [Retroalimentación](#user-content-retroalimentación)
+- [Introducción](#user-content-introducción)
+  - [Crea tu proyecto](#user-content-crea-tu-proyecto)
   - [Add a textfield to your storyboard](#user-content-add-a-textfield-to-your-storyboard)
 - [Gluing Our Views Together: The storyboard](#user-content-gluing-our-views-together-the-storyboard)
   - [Position text field using Auto Layout](#user-content-position-text-field-using-auto-layout)
@@ -32,27 +32,28 @@ README version: xCode 6.0, Swift 1.0
 
 ## Preámbulo
 
-1. This tutorial is based on [Apple's xCode 5 Objective C TODO tutorial](https://developer.apple.com/library/ios/referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343-CH2-SW1), which is an excellent place to look for auxiliary context (and screenshots!)
-1. Check out the Todo folder for the completed code
+1. Este tutorial es una versión actualizada y en español del [Swift TODO App Tutorial](https://github.com/jadekler/git-swift-todo-tutorial) de jadekler.
+1. El tutorial de jadekler está basado en el [Tutorial TODO en Objective C para Xcode 5 de Apple](https://developer.apple.com/library/ios/referencelibrary/GettingStarted/RoadMapiOS/index.html#//apple_ref/doc/uid/TP40011343-CH2-SW1), el cual es una excelente referencia para buscar recursos adicionales y capturas de pantalla.
+1. En el folder Todo encontrarás el código de la aplicación terminada en caso de que lo necesites.
 
-## Installing This App
+## Instalando la aplicación
 
-1. `cd /your/preferred/xcode/location`
+1. `cd /tu/directorio/de/xcode`
 1. `git clone https://github.com/jadekler/git-swift-todo-tutorial.git`
-1. Open xcode
-1. File > Open > /your/preferred/xcode/location/git-swift-todo-tutorial/Todo/Todo.xcodeproj
+1. Abre Xcode
+1. Archivo > Abrir > /tu/directorio/de/xcode/git-swift-todo-tutorial/Todo/Todo.xcodeproj
 
-## Feedback
+## Retroalimentación
 
-Please, provide feedback on anything you feel is lacking or could be better worded! Pull requests, github issues, or direct emails to jadekler@gmail.com are all welcome!
+¡Cualquier pregunta, sugerencia o retroalimentación es bienvenida! Contáctame a través de mi correo electrónico: osdagoso@hotmail.com.
 
-## Getting Start: The Basics
+## Introducción
 
-##### Create your project
-1. Open xCode
-1. Under iOS > Application, select 'Single View Application' and click Next
-1. Enter as follows ![](/img/img_1.png)
-1. Checkpoint: Hit the run button on the top left of xCode - you should see a blank white screen
+##### Crea tu proyecto
+1. Abre Xcode
+1. En la barra de menú, ve a iOS > Application, selecciona 'Single View Application' y haz click en Next
+1. Ingresa lo siguiente: ![](/img/img_1.png)
+1. Presiona el botón de ejecutar en la esquina superior izquierda de xCode - ahora debe aparecer una pantalla en blanco
 
 ##### Add a textfield to your storyboard
 1. In the Project Navigator on the far left of xCode, select Main.storyboard
