@@ -8,7 +8,7 @@ README version: xCode 6.0, Swift 1.0
 
 =======================
 
-- [Preámbulo](#user-content-preambulo)
+- [Preámbulo](#user-content-preámbulo)
 - [Installing This App](#user-content-installing-this-app)
 - [Feedback](#user-content-feedback)
 - [Getting Start: The Basics](#user-content-getting-start-the-basics)
