@@ -2,7 +2,7 @@
 
 ### IMPORTANT
 
-This tutorial is the Spanish translation of @jadekler's original tutorial to help teach latinamerican students about the basics of Swift.
+This tutorial is the Spanish translation of @jadekler's original tutorial to help teach non-English speakers about the basics of Swift in a non-profit non-sponsored event.
 
 =======================
 
@@ -29,7 +29,7 @@ README version: xCode 6.0, Swift 1.0
 
 ## Retroalimentación
 
-¡Cualquier pregunta, sugerencia o retroalimentación es bienvenida! Contáctame a través de mi correo electrónico: osdagoso@hotmail.com.
+¡Cualquier pregunta, sugerencia o retroalimentación es bienvenida! Recuerda que este es un trabajo original de @jadekler.
 
 ## Introducción
 
