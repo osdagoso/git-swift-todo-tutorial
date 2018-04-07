@@ -25,7 +25,7 @@ README version: xCode 6.0, Swift 1.0
 1. `cd /tu/directorio/de/xcode`
 2. `git clone https://github.com/jadekler/git-swift-todo-tutorial.git`
 3. Abre Xcode
-4. Archivo > Abrir > /tu/directorio/de/xcode/git-swift-todo-tutorial/Todo/Todo.xcodeproj
+4. File > Open > /tu/directorio/de/xcode/git-swift-todo-tutorial/Todo/Todo.xcodeproj
 
 ## Retroalimentación
 
@@ -59,28 +59,26 @@ Cuando corres tu código, puedes cambiar la orientación simplemente con ir a 'H
 1. En el navegador del proyecto en la parte más lejana izquieda de Xcode, selecciona Main.storyboard
 2. Selecciona el campo de texto (Text Field) en Vista (View)
 3. Establece el espacio de arriba en la parte de arriba
-  1. Control+Click y arrastra del Text Field al área justo encima de él, el cual debe de estar sobresaltado en azul y dice 'View'
-  2. Suelta lo que arrastraste
-  3. Selecciona 'Top Space to Top Layout Guide' que se encuentra en el menú pequeño de color negro.
+    1. Control+Click y arrastra del Text Field al área justo encima de él, el cual debe de estar sobresaltado en azul y dice 'View'
+    2. Suelta lo que arrastraste
+    3. Selecciona 'Top Space to Top Layout Guide' que se encuentra en el menú pequeño de color negro.
 4. Establece el espacio 'Líder' en la parte izquierda
-  1. Control+Click y arrastra del 'Text Field' hacia el área izquierda de la vista, la cual debe de estar resaltada en azul y debe de decir 'View'
-  2. Suelta lo que arrastraste
-  3. Selecciona 'Leading Space to Container Margin' que se encuentra en el menú pequeño de color negro.
+    1. Control+Click y arrastra del 'Text Field' hacia el área izquierda de la vista, la cual debe de estar resaltada en azul y debe de decir 'View'
+    2. Suelta lo que arrastraste
+    3. Selecciona 'Leading Space to Container Margin' que se encuentra en el menú pequeño de color negro.
 5. Establece el espacio de 'arrastre' en la derecha
-  1. Control+Click y arrastra del Text Field al área derecha de la vista, la cual debe de estar resaltada en azul y decir ‘View’
-  2. Suelta lo que arrastraste
-  3. Selecciona 'Trailing Space to Container Margin' del pequeño menú negro
+    1. Control+Click y arrastra del Text Field al área derecha de la vista, la cual debe de estar resaltada en azul y decir ‘View’
+    2. Suelta lo que arrastraste
+    3. Selecciona 'Trailing Space to Container Margin' del pequeño menú negro
 6. Checkpoint: Corre tu código
-  1. Debes de ser capaz de ver el Text Field con el mismo espaciamiento en cada lado y en la parte superior.
-  2. En la barra superior de tu computadora, da click en ‘Hardware’ y selecciona ‘Rotate Left’ para entrar en vista horizontal.
-  3. El margen superior, izquierdo y derecho deben coincidir con la vista vertical (normal).
+    1. Debes de ser capaz de ver el Text Field con el mismo espaciamiento en cada lado y en la parte superior.
+    2. En la barra superior de tu computadora, da click en ‘Hardware’ y selecciona ‘Rotate Left’ para entrar en vista horizontal.
+    3. El margen superior, izquierdo y derecho deben coincidir con la vista vertical (normal).
 
 ##### Crear un table view controller
 1. En el navegador del proyecto, que se encuentra en la parte de la izquierda de Xcode, selecciona Main.storyboard
 2. En la librería de Objetos, busca el table view controller.
-3. Arrastra el table view controller y suéltalo en el lienzo (canvas). Si te falta espacio, da click derecho en el lienzo y haz zoom out.
-<Asegurate de haber hecho zoom de 100%>
-<view o view controller>
+3. Arrastra el table view controller y suéltalo en el lienzo (canvas). Si te falta espacio, da click derecho en el lienzo y haz zoom out. Asegurate de haber hecho zoom de 100%.
 4. Selecciona la flecha en la izquierda de tu controlador de vista
 5. Arrástralo hasta tu table view controller para establecer tu table view controller como escena inicial.
 6. Tu lienzo debe de parecer algo así: ![](/img/img_4.png)
@@ -93,30 +91,29 @@ Cuando corres tu código, puedes cambiar la orientación simplemente con ir a 'H
 4. ![](/img/img_5.png)
 5. En el inspector de atributos, ingresa 'creada My To-Do List' en el área de título (Title field)
 6. Agrega un botón de '+'
-  1. Arrastra un botón de barra desde la librería de objetos, hasta la derecha de la barra de navegación en el table view controller
-  2. Selecciona el botón de barra más reciente.
-  3. En el inspector de Atributos, cambia el identificador de un Custom por un Add
+    1. Arrastra un botón de barra desde la librería de objetos, hasta la derecha de la barra de navegación en el table view controller
+    2. Selecciona el botón de barra más reciente.
+    3. En el inspector de Atributos, cambia el identificador de un Custom por un Add
 7. Checkpoint: Corre tu código - debes de ser capaz de ver tu botón de +, pero no va a hacer nada, aún.
 
 ##### Configurar el botón de agregar
 1. Control+Click y arrastra del botón de agregar a tu controlador original de vista (View Controller)
 2. Suelta lo que arrastraste y selecciona 'present modally'
-3. Checkpoint: Corre tu código- Da click en el botón de + y la vista de New Todo debe de aparecer
+3. Checkpoint: Corre tu código - Haz click en el botón de + y la vista de New Todo debe de aparecer
 
 ##### Agregar el navigation controller al view controller
-1. Seleccionar el view controller
-<no confundir esto con el table list view controller>
+1. Seleccionar el view controller (no confundir esto con el table list view controller)
 2. Con el view controller seleccionado, ir a Editor > Embed In > Navigation Controller
 3. En el canvas, seleccionar el área de título recientemente agregado en tu table view (o en el outline view, seleccionar Navigation Item debajo de Table View Controller).
 4. En el Attribute Inspector, escribe 'Add Todo' en el campo de título.
 5. Agregar el botón 'Done' a la derecha del título
-  1. Agrega un Bar Button Item del Object Library a la derecha del navigation bar en el table view controller
-  2. Seleccionar el botón que acabas de agregar
-  3. En el Attributes inspector, encuentra la opción Identifier en la sección Bar Button Item. Escoge 'Done' del menú que aparece.
+    1. Agrega un Bar Button Item del Object Library a la derecha del navigation bar en el table view controller
+    2. Seleccionar el botón que acabas de agregar
+    3. En el Attributes inspector, encuentra la opción Identifier en la sección Bar Button Item. Escoge 'Done' del menú que aparece.
 6. Agregar el botón de 'Cancel' a la izquierda del título
-  1. Agrega un Bar Button Item del Object Library a la izquierda del navigation bar en el table view controller
-  2. Seleccionar el botón que acabas de agregar
-  3. En el Attributes inspector, encuentra la opción Identifier en la sección Bar Button Item. Escoge ‘Cancel’ del menú que aparece.
+    1. Agrega un Bar Button Item del Object Library a la izquierda del navigation bar en el table view controller
+    2. Seleccionar el botón que acabas de agregar
+    3. En el Attributes inspector, encuentra la opción Identifier en la sección Bar Button Item. Escoge ‘Cancel’ del menú que aparece.
 
 7. ![](/img/img_6.png)
 8. Checkpoint: Presiona el botón para correr tu aplicación - deberás ver tus nuevos botones 'Done' y 'Cancel' pero aún no harán nada.
@@ -235,7 +232,6 @@ Tu clase debe verse de la siguiente manera
   }
 
   ```
-<this function looks retarded because: https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-XID_202 (go to External Parameter Names>
 7. La última función que tendremos que generar es UITableViewCells para cada renglón
   ```swift
     // override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -303,7 +299,7 @@ Tu clase debe verse de la siguiente manera
     return tempCell
   }
   ```
-1. Checkpoint - corre la aplicación, selecciona un elemento y un check marck debe de aparecer al lado de él, selecciónalo otra vez para hacer que el check marck desaparezca
+5. Checkpoint - corre la aplicación, selecciona un elemento y un check marck debe de aparecer al lado de él, selecciónalo otra vez para hacer que el check marck desaparezca
 
 ##### Por último - agregar nuevos elementos
 1. En el navegador del proyecto selecciona Main.storyboard
