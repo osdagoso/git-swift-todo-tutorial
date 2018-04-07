@@ -114,7 +114,6 @@ Cuando corres tu código, puedes cambiar la orientación simplemente con ir a 'H
     1. Agrega un Bar Button Item del Object Library a la izquierda del navigation bar en el table view controller
     2. Seleccionar el botón que acabas de agregar
     3. En el Attributes inspector, encuentra la opción Identifier en la sección Bar Button Item. Escoge ‘Cancel’ del menú que aparece.
-
 7. ![](/img/img_6.png)
 8. Checkpoint: Presiona el botón para correr tu aplicación - deberás ver tus nuevos botones 'Done' y 'Cancel' pero aún no harán nada.
 
