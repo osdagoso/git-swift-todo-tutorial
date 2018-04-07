@@ -1,6 +1,6 @@
 # Tutorial de aplicación de lista de tareas en Swift
 
-## IMPORTANT
+### IMPORTANT
 
 This tutorial is the Spanish translation of @jadekler's original tutorial to help teach latinamerican students about the basics of Swift.
 
@@ -13,28 +13,6 @@ CODE version: xCode 7.2.1, Swift 2.0
 README version: xCode 6.0, Swift 1.0
 
 =======================
-
-- [Preámbulo](#user-content-preámbulo)
-- [Instalando la aplicación](#user-content-instalando-la-aplicación)
-- [Retroalimentación](#user-content-retroalimentación)
-- [Introducción](#user-content-introducción)
-  - [Crea tu proyecto](#user-content-crea-tu-proyecto)
-  - [Agrega un campo de texto al storyboard](#user-content-agrega-un-campo-de-texto-al-storyboard)
-- [Uniendo nuestras vistas: The storyboard](#user-content-uniendo-nuestras-vistas-the-storyboard)
-  - [Posicionando el campo de texto utilizando Auto Layout](#user-content-posicionando-el-campo-de-texto-utilizando-auto-layout)
-  - [Crear un table view controller](#user-content-crear-un-controlador-de-table-view)
-  - [Agregar un ‘segue’ para navegar hacia adelante](#user-content-agregar-un-segue-para-navegar-hacia-adelante)
-  - [Configurar el botón de agregar](#user-content-configurar-el-botón-de-agregar)
-  - [Agregar un controlador de navegación al controlador de view](#user-content-agregar-un-controlador-de-navegación-al-controlador-de-view)
-- [Finally Programming: Swift](#user-content-finally-programming-swift)
-  - [Create a custom view controller that is a subclass of UIViewController](#user-content-create-a-custom-view-controller-that-is-a-subclass-of-uiviewcontroller)
-  - [Create a custom table view controller that is a subclass of UITableViewController](#user-content-create-a-custom-table-view-controller-that-is-a-subclass-of-uitableviewcontroller)
-  - [Connecting cancel and done buttons to exit segue](#user-content-connecting-cancel-and-done-buttons-to-exit-segue)
-  - [Create a Data Class](#user-content-create-a-data-class)
-  - [Fill in your TodoItem class](#user-content-fill-in-your-todoitem-class)
-  - [Give your table view controller an array of TodoItems](#user-content-give-your-table-view-controller-an-array-of-todoitems)
-  - [Marcar elemento completado](#user-content-marcar-elemento-completado)
-  - [Por último - agregar nuevos elementos](#user-content-por-ultimo---agregar-nuevos-elementos)
 
 ## Preámbulo
 
@@ -244,7 +222,8 @@ Tu clase debe verse de la siguiente manera
   ```
 5. Haz que tu tabla solamente tenga una sección:
   ```swift
-  override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
+  // func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+  override func numberOfSections(in tableView: UITableView) -> Int {
       return 1
   }
 
@@ -259,12 +238,14 @@ Tu clase debe verse de la siguiente manera
 <this function looks retarded because: https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-XID_202 (go to External Parameter Names>
 7. La última función que tendremos que generar es UITableViewCells para cada renglón
   ```swift
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-      let tempCell = tableView.dequeueReusableCellWithIdentifier("ListPrototypeCell") as UITableViewCell
+    // override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      // let tempCell = tableView.dequeueReusableCellWithIdentifier("ListPrototypeCell") as UITableViewCell
+      let tempCell = tableView.dequeueReusableCell(withIdentifier: "ListPrototypeCell")!
       let todoItem = todoItems[indexPath.row]
 
       // Downcast from UILabel? to UILabel
-      let cell = tempCell.textLabel as UILabel!
+      let cell = tempCell.textLabel as UILabel?
       cell.text = todoItem.itemName
 
       return tempCell
@@ -281,13 +262,16 @@ Tu clase debe verse de la siguiente manera
 1.  En el navegador del proyecto selecciona TodoListTableViewController.swift
 2. Agrega un  tableView en la función de selección para marcar todoItems como completados
   ```swift
-  Sobre escribe la  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    tableView.deselectRowAtIndexPath(indexPath, animated: false)
+  // override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    // tableView.deselectRowAtIndexPath(indexPath, animated: false)
+    tableView.deselectRow(at: indexPath, animated: false)
 
     let tappedItem = todoItems[indexPath.row] as TodoItem
     tappedItem.completed = !tappedItem.completed
 
-    tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
+    // tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
+    tableView.reloadRows(at: [indexPath], with: .none)
   }
   ```
 3. Modifica la función de celda de visualización de tableView para tener un checkmark si el elemento ha sido completado
@@ -301,7 +285,8 @@ Tu clase debe verse de la siguiente manera
   ```
 4. La versión final:
   ```swift
-  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+  // override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let tempCell = tableView.dequeueReusableCellWithIdentifier("ListPrototypeCell") as UITableViewCell
     let todoItem = todoItems[indexPath.row]
 
